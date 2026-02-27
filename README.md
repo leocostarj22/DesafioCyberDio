@@ -32,7 +32,11 @@ Professional, reproducible security lab showcasing credential attack techniques 
 - /wordlists – sample users/passwords used in tests
 - /images – optional screenshots as evidence
 - /scripts – optional helper scripts
+- /evidence – timestamped execution logs (auto-generated)
 - README.md – this document
+- EVIDENCE.md – auto-generated evidence report
+- lab-execution.sh – automation script for the three attack scenarios
+- generate-evidence.sh – parser that builds EVIDENCE.md from logs
 
 ## Setup
 1) Networking: create a Host-Only network in VirtualBox, assign static IPs to VMs.
@@ -135,6 +139,7 @@ Mitigations
 ## Evidence Handling
 - Store terminal output and screenshots in /images with clear filenames.
 - Record successful credential pairs and timestamps.
+- Run `./generate-evidence.sh` after each lab session to update EVIDENCE.md automatically.
 
 ## Ethical & Legal Notice
 All activities were performed in a closed lab under authorization. Never execute these techniques against systems you do not own.
